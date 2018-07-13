@@ -1,0 +1,21 @@
+
+.header {
+    
+    background: #87aedd;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    .logo {
+        width: 100px;
+    }
+
+    .header-text {
+        color: white;
+        font-family: "Source Sans Pro";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+}
