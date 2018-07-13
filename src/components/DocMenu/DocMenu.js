@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './DocMenu.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class DocMenu extends Component {
 
@@ -9,10 +9,10 @@ class DocMenu extends Component {
             <div className="doc-menu">
                 <ul>
                     <li>
-                        <Link to="/doc/Checkbox">Checkbox</Link>
+                        <NavLink to="/doc/Checkbox" activeClassName="selected">Checkbox</NavLink>
                     </li>
                     <li>
-                        <Link to="/doc/Dropdown">Dropdown</Link>
+                        <NavLink to="/doc/Dropdown" activeClassName="selected">Dropdown</NavLink>
                     </li>
                 </ul>
             </div>

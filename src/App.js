@@ -12,27 +12,6 @@ import DocCheckbox from './components/api/Checkbox/doc/DocCheckbox';
 
 class App extends Component {
 
-  state = {
-    items: [
-      {
-        id: 1,
-        name: 'First Item'
-      },
-      {
-        id: 2,
-        name: 'Second Item'
-      },
-      {
-        id: 3,
-        name: 'Third Item'
-      },
-      {
-        id: 4,
-        name: 'Fourth Item'
-      }
-    ]
-  }
-
   render() {
     return (
       <Router>
@@ -45,15 +24,6 @@ class App extends Component {
             <Route path="/doc/Checkbox" component={DocCheckbox}/>
             <Route path="/doc/Dropdown" component={DocDropdown}/>
           </div>
-
-          {/* <Dropdown items={this.state.items}
-                    selectedItem={this.state.items[1]}
-                    changed={(item) => alert('Item was changed - ' + item.name)}/>
-
-          <br/><br/><br/>
-
-          <Checkbox changed={(checked) => alert('changed - ' + checked)}
-                    checked={true}/> */}
 
         </div>
       </Router>

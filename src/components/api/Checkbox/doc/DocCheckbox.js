@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import ComponentDescription from '../../../ComponentDescription/ComponentDescription';
+import Checkbox from '../Checkbox';
 
 class DocCheckbox extends Component {
 
     render() {
         return (
             <div>
-                Checkbox
+                <ComponentDescription>
+                    <div key="description">Description for the checkbox</div>
+                    <Checkbox changed={(checked) => alert('changed - ' + checked)} checked={true} key="component"/>
+                </ComponentDescription>
             </div>
         )
     }

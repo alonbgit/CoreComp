@@ -2,7 +2,7 @@
 .doc-menu {
 
     width: 260px;
-    border: 1px solid black;
+    border-right: 1px solid #c4c4c4;
     height: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 20px;
@@ -15,6 +15,15 @@
         li {
             margin-top: 6px;
             cursor: pointer;
+
+            a:visited {
+                color: black;
+            }
+
+            a.selected {
+                font-weight: bold;
+            }
+
         }
     }
 
