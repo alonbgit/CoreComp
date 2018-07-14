@@ -9,7 +9,7 @@ class DocCheckbox extends Component {
             <div>
                 <ComponentDescription>
                     <div key="description">Description for the checkbox</div>
-                    <Checkbox changed={(checked) => alert('changed - ' + checked)} checked={true} key="component"/>
+                    <Checkbox checked={true} key="component"/>
                 </ComponentDescription>
             </div>
         )

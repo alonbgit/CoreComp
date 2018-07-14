@@ -32,7 +32,6 @@ class DocDropdown extends Component {
                     <div key="description">Description for the dropdown</div>
                      <Dropdown items={this.state.items}
                                selectedItem={this.state.items[1]}
-                               changed={(item) => alert('Item was changed - ' + item.name)}
                                key="component"/>
                 </ComponentDescription>
             </div>

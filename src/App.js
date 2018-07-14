@@ -6,9 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import DocDropdown from './components/api/Dropdown/doc/DocDropdown';
 import DocCheckbox from './components/api/Checkbox/doc/DocCheckbox';
-
-//import Dropdown from './components/api/Dropdown/Dropdown';
-//import Checkbox from './components/api/Checkbox/Checkbox';
+import DocToggleButton from './components/api/ToggleButton/doc/DocToggleButton';
 
 class App extends Component {
 
@@ -23,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/doc/Checkbox" component={DocCheckbox}/>
             <Route path="/doc/Dropdown" component={DocDropdown}/>
+            <Route path="/doc/ToggleButton" component={DocToggleButton}/>
           </div>
 
         </div>

@@ -49,7 +49,8 @@ class Dropdown extends Component {
     selectItem = (item) => {
         this.setState({selectedItem: item});
         this.hideDropdown();
-        this.props.changed(item);
+        if (this.props.changed)
+            this.props.changed(item);
     }
 
     showDropdown = () => {
