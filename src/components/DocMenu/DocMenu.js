@@ -20,6 +20,9 @@ class DocMenu extends Component {
                     <li>
                         <NavLink to="/doc/TabSelector" activeClassName="selected">TabSelector</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/doc/ListView" activeClassName="selected">ListView</NavLink>
+                    </li>
                 </ul>
             </div>
         )
