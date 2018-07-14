@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import DocDropdown from './components/api/Dropdown/doc/DocDropdown';
 import DocCheckbox from './components/api/Checkbox/doc/DocCheckbox';
 import DocToggleButton from './components/api/ToggleButton/doc/DocToggleButton';
+import TabSelector from './components/api/TabSelector/doc/DocTabSelector';
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/doc/Checkbox" component={DocCheckbox}/>
             <Route path="/doc/Dropdown" component={DocDropdown}/>
             <Route path="/doc/ToggleButton" component={DocToggleButton}/>
+            <Route path="/doc/TabSelector" component={TabSelector}/>
           </div>
 
         </div>

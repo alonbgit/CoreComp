@@ -17,6 +17,9 @@ class DocMenu extends Component {
                     <li>
                         <NavLink to="/doc/ToggleButton" activeClassName="selected">ToggleButton</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/doc/TabSelector" activeClassName="selected">TabSelector</NavLink>
+                    </li>
                 </ul>
             </div>
         )
