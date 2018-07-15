@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './TreeView.scss';
 import PropTypes from 'prop-types';
+import Icon from 'react-fontawesome';
 
 class TreeView extends Component {
 
     state = {
-        visibleItems: []
+        visibleItems: [],
+        selectedItem: null
     }
 
     componentWillMount() {
@@ -36,7 +38,8 @@ class TreeView extends Component {
                  key={item.id}
                  style={{paddingLeft: (n * 7) + 'px'}}
                  onClick={(e) => this.onItemClick(e, item)}>
-                <span>{item.name}</span>
+                {item.children && item.children.length > 0 && <Icon name={this.getIconName(item)} className="arrow"/>}
+                <span className={this.getIsSelectedClass(item)}>{item.name}</span>
                 {item.children && item.children.map(child => (
                     this.renderItem(child, n)
                 ))}
@@ -44,9 +47,23 @@ class TreeView extends Component {
         )
     }
 
+    getIconName = (item) => {
+        let name = 'angle-right';
+        if (!item.children || item.children.length === 0)
+            return name;
+        const isChildrenVisible = this.state.visibleItems.find(c => c === item.children[0]);
+        if (!isChildrenVisible)
+            return name;
+        return 'angle-down';
+    }
+
     onItemClick = (e, item) => {
         e.stopPropagation();
         
+        this.setState({
+            selectedItem: item
+        });
+
         if (!item.children || item.children.length === 0)
             return;
         const isChildrenVisible = this.state.visibleItems.find(c => c === item.children[0]);
@@ -71,6 +88,9 @@ class TreeView extends Component {
                 visibleItems: newVisibleItems
             })
         }
+
+        if (this.props.changed)
+            this.props.changed(item);
     }
 
     getItemClasses = (item) => {
@@ -78,6 +98,13 @@ class TreeView extends Component {
         const isItemExist = this.state.visibleItems.find(c => c === item);
         if (isItemExist)
             classes.push('visible');
+        return classes.join(' ');
+    }
+
+    getIsSelectedClass = (item) => {
+        let classes = ['name'];
+        if (this.state.selectedItem === item)
+            classes.push('selected');
         return classes.join(' ');
     }
 
