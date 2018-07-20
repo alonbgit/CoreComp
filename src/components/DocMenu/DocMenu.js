@@ -29,6 +29,9 @@ class DocMenu extends Component {
                     <li>
                         <NavLink to="/doc/Popup" activeClassName="selected">Popup</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/doc/Buttons" activeClassName="selected">Buttons</NavLink>
+                    </li>
                 </ul>
             </div>
         )
