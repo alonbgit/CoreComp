@@ -10,6 +10,7 @@ import DocToggleButton from './components/api/ToggleButton/doc/DocToggleButton';
 import DocTabSelector from './components/api/TabSelector/doc/DocTabSelector';
 import DocListView from './components/api/ListView/doc/DocListView';
 import DocTreeView from './components/api/TreeView/doc/DocTreeView';
+import DocPopup from './components/api/Popup/doc/DocPopup';
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/doc/TabSelector" component={DocTabSelector}/>
             <Route path="/doc/ListView" component={DocListView}/>
             <Route path="/doc/TreeView" component={DocTreeView}/>
+            <Route path="/doc/Popup" component={DocPopup}/>
           </div>
 
         </div>
